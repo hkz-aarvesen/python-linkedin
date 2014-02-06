@@ -88,7 +88,8 @@ class LinkedInAuthentication(object):
 
     @property
     def authorization_url(self):
-        self.state = self.get_new_state()
+        if not self.state:
+            self.state = self.get_new_state()
         qd = {'response_type': 'code',
               'client_id': self.key,
               'scope': (' '.join(self.permissions)).strip(),
