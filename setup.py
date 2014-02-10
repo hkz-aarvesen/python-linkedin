@@ -8,13 +8,17 @@ except ImportError:
 
 from linkedin import __version__
 
+# force a slightly new version to override the previous forking
+myver = '{}.1'.format(__version__)
+
 
 with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
     long_description = readme.read()
 
 
 setup(name='python-linkedin',
-      version=__version__,
+      #version=__version__,
+      version=myver,
       description='Python Interface to the LinkedIn API',
       long_description=long_description,
       classifiers=[
