@@ -9,7 +9,7 @@ except ImportError:
 from linkedin import __version__
 
 # force a slightly new version to override the previous forking
-myver = '{}.1'.format(__version__)
+myver = '{}.2'.format(__version__)
 
 
 with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
